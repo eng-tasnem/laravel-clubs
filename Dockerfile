@@ -42,4 +42,4 @@ RUN echo 'server { \n\
 }' > /etc/nginx/sites-available/default
 
 # تشغيل خادم PHP و Nginx معاً عند إقلاع الموقع
-CMD service nginx start && php-fpm
+CMD nginx -g "daemon off;" & php-fpm
